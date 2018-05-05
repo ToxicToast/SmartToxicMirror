@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalendarComponent implements OnInit {
 
-  localState: any;
+  localState: any; // TODO Refactor
 
   constructor() { }
 

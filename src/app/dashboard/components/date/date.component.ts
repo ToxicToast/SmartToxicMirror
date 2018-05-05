@@ -16,8 +16,8 @@ export class DateComponent implements OnInit {
       hours: 0,
       minutes: 0,
       seconds: 0,
-      day: 0,
-      dayName: dayNames.SUNDAY,
+      day: 1,
+      dayName: dayNames.THURSDAY,
       month: monthNames.JANUARY,
       year: 1970,
       show: false

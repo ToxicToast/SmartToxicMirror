@@ -7,7 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeatherComponent implements OnInit {
 
-  constructor() { }
+  localState: any; // TODO Refactor
+
+  constructor() {
+    this.localState = {
+      sunIcon: undefined,
+      sunTime: undefined,
+      wind: undefined,
+      windDirection: undefined,
+      temp: undefined,
+      city: undefined,
+      iconClass: undefined
+    };
+  }
 
   ngOnInit() {
   }

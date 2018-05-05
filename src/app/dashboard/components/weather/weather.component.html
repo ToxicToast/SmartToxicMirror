@@ -1,3 +1,19 @@
-<p>
-  weather works!
-</p>
+<div id="module_1_currentweather" class="module currentweather">
+    <header>Wetter ({{localState.city}})</header>
+    <div class="module-content">
+        <div>
+            <div class="normal medium">
+                <span class="wi wi-strong-wind dimmed"></span>
+                <span>{{localState.wind}}</span>
+                <sup>{{localState.winddirection}}</sup>
+                <span></span>
+                <span class="wi dimmed" [ngClass]="localState.sunIcon">&nbsp;</span>
+                <span>{{localState.sunTime.hour}}:{{localState.sunTime.minute}}</span>
+            </div>
+            <div class="large light">
+                <span [class]="localState.iconClass"></span>
+                <span class="bright">&nbsp; {{localState.temp}}°</span>
+            </div>
+        </div>
+    </div>
+</div>
