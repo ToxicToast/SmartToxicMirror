@@ -14,7 +14,14 @@
     ],
     "lib": [
       "es2017",
-      "dom"
-    ]
+      "dom",
+      "esnext.asynciterable"
+    ],
+    "paths": {
+      "@app/*": ["app/*"],
+      "@env/*": ["environments/*"],
+      "@assets/*": ["assets/*"],
+      "@dashboard/*": ["app/dashboard/*"]
+    }
   }
 }

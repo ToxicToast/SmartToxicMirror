@@ -1,0 +1,13 @@
+<div id="module_2_clock" class="module clock">
+    <div class="module-content">
+        <div *ngIf="localState.show">
+            <div class="date normal medium">
+                {{localState.dayName}}, {{localState.day}}. {{localState.month}} {{localState.year}}
+            </div>
+            <div class="time bright large light">
+                {{localState.hours}}:{{localState.minutes}}
+                <sup class="dimmed">{{localState.seconds}}</sup>
+            </div>
+        </div>
+    </div>
+</div>
