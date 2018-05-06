@@ -48,14 +48,14 @@ export const currentDay = () => {
   const date = new Date();
   const dayToday = date.getDay();
   const days = [];
+  days.push(dayNames.SUNDAY);
   days.push(dayNames.MONDAY);
   days.push(dayNames.TUESDAY);
   days.push(dayNames.WEDNESDAY);
   days.push(dayNames.THURSDAY);
   days.push(dayNames.FRIDAY);
   days.push(dayNames.SATURDAY);
-  days.push(dayNames.SUNDAY);
-  return days[dayToday - 1];
+  return days[dayToday];
 };
 
 export const renderTime = () => {

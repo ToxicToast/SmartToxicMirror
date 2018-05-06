@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { CoreModule } from '../core/core.module';
+
 import { DashboardRoutingModule } from './dashboard-routing.module';
 
 import { DashboardContainerComponent } from './containers/dashboard-container/dashboard-container.component';
@@ -14,7 +16,8 @@ import { WeatherContainerComponent } from './containers/weather-container/weathe
 @NgModule({
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    CoreModule
   ],
   declarations: [
     DashboardContainerComponent,
