@@ -5,10 +5,10 @@
             <div class="normal medium">
                 <span class="wi wi-strong-wind dimmed"></span>
                 <span>{{localState.wind}}</span>
-                <sup>{{localState.winddirection}}</sup>
+                <sup>{{localState.windDirection}}</sup>
                 <span></span>
                 <span class="wi dimmed" [ngClass]="localState.sunIcon">&nbsp;</span>
-                <span>sunTime.hour:sunTime.minute</span>
+                <span>{{ localState.sunTime }}</span>
             </div>
             <div class="large light">
                 <span [class]="localState.iconClass"></span>
