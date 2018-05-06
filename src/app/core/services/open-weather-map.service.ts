@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
+import { OpenWeatherServiceModel } from '../models/Weather.model';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class OpenWeatherMapService {
 
-  private config = {}; // ToDo - Need Interface
+  private config: OpenWeatherServiceModel = {};
 
   constructor(
     private http: HttpClient

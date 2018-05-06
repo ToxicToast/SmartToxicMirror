@@ -67,7 +67,7 @@ export const getWindDirection = (deg) => {
     'NNW', 'N'
   ];
   const degrees = deg % windDir;
-  const Index = Math.round(degrees / 22.5, 0) + 1;
+  const Index = Math.round(degrees / 22.5) + 1;
   return directions[Index - 1];
 };
 
@@ -75,25 +75,30 @@ export const checkSunTime = (sunrise, sunset) => {
   const sunriseTime = getSunTime(sunrise);
   const sunsetTime = getSunTime(sunset);
   const sunnow = new Date().getHours();
+  //
+  let payload = {
+    'sunIcon': null,
+    'sunTime': null
+  };
   if (sunriseTime.hour <= sunnow) {
-    const payload = {
+    payload = {
       'sunIcon': 'wi-sunset',
       'sunTime': sunsetTime
     };
   } else if (sunriseTime.hour >= sunnow) {
-    const payload = {
+    payload = {
       'sunIcon': 'wi-sunrise',
       'sunTime': sunriseTime
     };
   }
   //
   if (sunsetTime.hour <= sunnow) {
-    const payload = {
+    payload = {
       'sunIcon': 'wi-sunset',
       'sunTime': sunsetTime
     };
   } else if (sunsetTime.hour >= sunnow) {
-    const payload = {
+    payload = {
       'sunIcon': 'wi-sunrise',
       'sunTime': sunriseTime
     };
